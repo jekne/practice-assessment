@@ -8,8 +8,8 @@ module.exports = {
       {
         title: "Johann Space",
         description: "this is the johanns space",
-        backgroundColor: "black",
-        color: "white",
+        backgroundColor: "#ffffff",
+        color: "#000000",
         userId: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -17,8 +17,8 @@ module.exports = {
       {
         title: "Mom Space",
         description: "this is my mom space",
-        backgroundColor: "pink",
-        color: "purple",
+        backgroundColor: "#ffffff",
+        color: "#000000",
         userId: 2,
         createdAt: new Date(),
         updatedAt: new Date(),
