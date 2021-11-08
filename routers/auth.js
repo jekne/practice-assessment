@@ -7,6 +7,7 @@ const { SALT_ROUNDS } = require("../config/constants");
 
 const router = new Router();
 
+//http -v POST :4000/login name=testuser email=test@test.com password=test1234
 router.post("/login", async (req, res, next) => {
   try {
     const { email, password } = req.body;
@@ -21,7 +22,7 @@ router.post("/login", async (req, res, next) => {
 
     if (!user || !bcrypt.compareSync(password, user.password)) {
       return res.status(400).send({
-        message: "User with that email not found or password incorrect"
+        message: "User with that email not found or password incorrect",
       });
     }
 
@@ -44,7 +45,7 @@ router.post("/signup", async (req, res) => {
     const newUser = await User.create({
       email,
       password: bcrypt.hashSync(password, SALT_ROUNDS),
-      name
+      name,
     });
 
     delete newUser.dataValues["password"]; // don't send back the password hash
