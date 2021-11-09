@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const express = require("express");
 const Space = require("../models/").space;
-
+const Story = require("../models/").story;
 const router = new Router();
 const { PORT } = require("../config/constants");
 
@@ -22,17 +22,17 @@ router.get("/", async (req, res, next) => {
 });
 
 //need to work on this is not working
-//find the user  ✗ http -v GET :4000/spaces/1
-router.get("/spaces/:userId", async (req, res) => {
+//find the spaces  ✗ http -v GET :4000/spaces/1
+router.get("/:spaceId", async (req, res) => {
   const params = req.params;
   console.log("the params", params); // ***this way you can se from where it comming**
 
-  const userId = parseInt(req.params.userId);
-  const user = await Space.findByPk(id);
-  if (!user) {
-    res.status(404).send("User not found");
+  const spaceId = parseInt(req.params.spaceId);
+  const space = await Space.findByPk(spaceId, { include: { model: Story } });
+  if (!space) {
+    res.status(404).send("space not found");
   } else {
-    res.send(user);
+    res.send(space);
   }
 });
 
