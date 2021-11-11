@@ -23,6 +23,24 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        title: "Ge Space",
+        description: "this is my mom space",
+        backgroundColor: "#33FF4C",
+        color: "#100999",
+        userId: 3,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        title: "Cá Space",
+        description: "this is my mom space",
+        backgroundColor: "#33FF4C",
+        color: "#100999",
+        userId: 4,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
     ]);
     /**
      * Add seed commands here.

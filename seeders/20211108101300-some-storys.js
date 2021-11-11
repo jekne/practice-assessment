@@ -26,7 +26,7 @@ module.exports = {
         content: "this is the Cacá content",
         imageUrl:
           "https://images.pexels.com/photos/415708/pexels-photo-415708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        spaceId: 1,
+        spaceId: 4,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -35,7 +35,70 @@ module.exports = {
         content: "this is the Ge content",
         imageUrl:
           "https://images.pexels.com/photos/234510/pexels-photo-234510.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        spaceId: 1,
+        spaceId: 3,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Ge stories",
+        content: "this is the Ge content",
+        imageUrl:
+          "https://images.pexels.com/photos/234510/pexels-photo-234510.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        spaceId: 3,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Ge stories",
+        content: "this is the Ge content",
+        imageUrl:
+          "https://images.pexels.com/photos/234510/pexels-photo-234510.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        spaceId: 3,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Ge stories",
+        content: "this is the Ge content",
+        imageUrl:
+          "https://images.pexels.com/photos/234510/pexels-photo-234510.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        spaceId: 3,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Cá stories",
+        content: "this is the Cacá content",
+        imageUrl:
+          "https://images.pexels.com/photos/415708/pexels-photo-415708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        spaceId: 4,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Cá stories",
+        content: "this is the Cacá content",
+        imageUrl:
+          "https://images.pexels.com/photos/415708/pexels-photo-415708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        spaceId: 4,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Cá stories",
+        content: "this is the Cacá content",
+        imageUrl:
+          "https://images.pexels.com/photos/415708/pexels-photo-415708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        spaceId: 4,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Cá stories",
+        content: "this is the Cacá content",
+        imageUrl:
+          "https://images.pexels.com/photos/415708/pexels-photo-415708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        spaceId: 4,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
