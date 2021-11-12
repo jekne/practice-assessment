@@ -21,12 +21,13 @@ router.get("/", async (req, res, next) => {
     next(error);
   }
 });
-
+//// http://localhost:4000/3/story
 //Insert a new story
 // http -v POST :4000/stories name=jojo content=ojo@joj imageUrl=123456 spaceId=9
-router.post("/", async (req, res, next) => {
+router.post("/:spaceId/story", async (req, res, next) => {
   try {
-    const { name, content, imageUrl, spaceId } = req.body;
+    const spaceId = req.params.spaceId;
+    const { name, content, imageUrl } = req.body;
 
     if (!name || !content || !imageUrl || !spaceId) {
       res
