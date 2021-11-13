@@ -5,6 +5,7 @@ const Space = require("../models/").space;
 const User = require("../models/").user;
 const router = new Router();
 const { PORT } = require("../config/constants");
+const authMiddleware = require("../auth/middleware");
 
 //find all the the storys  ✗ http -v GET :4000/stories/3
 router.get("/", async (req, res, next) => {
@@ -24,10 +25,11 @@ router.get("/", async (req, res, next) => {
 //// http://localhost:4000/3/story
 //Insert a new story
 // http -v POST :4000/stories name=jojo content=ojo@joj imageUrl=123456 spaceId=9
-router.post("/:spaceId/story", async (req, res, next) => {
+router.post("/:spaceId/story", authMiddleware, async (req, res, next) => {
   try {
     const spaceId = req.params.spaceId;
     const { name, content, imageUrl } = req.body;
+    // const space_id = req.space.id;
 
     if (!name || !content || !imageUrl || !spaceId) {
       res
@@ -51,7 +53,7 @@ router.post("/:spaceId/story", async (req, res, next) => {
         if (!newStory) {
           res.status(400).send("Something went wrong");
         } else {
-          res.status(200).send(newStory);
+          res.status(200).send({ message: "new story posted", newStory });
         }
       }
     }

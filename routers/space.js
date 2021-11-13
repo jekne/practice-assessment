@@ -89,4 +89,31 @@ router.delete("/:id", async (req, res, next) => {
   }
 });
 
+// http -v POST :4000/spaces title=jojo description=ojo@joj backgroundColor=white color=green userId=1
+// Update a space
+router.put("/:spaceId", async (req, res, next) => {
+  try {
+    const spaceId = parseInt(req.params.spaceId);
+    const { title, description, backgroundColor, color } = req.body;
+    const spaceToUpdate = await Space.findByPk(spaceId);
+    console.log("spaces.js: req.body:", req.body);
+    if (!title) {
+      res.status(400).send("Space requires a title.");
+    } else if (!spaceToUpdate) {
+      res.status(404).send("Space not found");
+    } else {
+      const updatedSpace = await spaceToUpdate.update({
+        spaceId,
+        title,
+        description,
+        backgroundColor,
+        color,
+      });
+      res.json(updatedSpace);
+    }
+  } catch (e) {
+    next(e);
+  }
+});
+
 module.exports = router;
